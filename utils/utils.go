@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	razorpay "github.com/razorpay/razorpay-go"
+	razorpay "github.com/prithvihv/razorpay-go"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/razorpay/razorpay-go/constants"
-	"github.com/razorpay/razorpay-go/utils"
+	"github.com/prithvihv/razorpay-go/constants"
+	"github.com/prithvihv/razorpay-go/utils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -37,14 +37,14 @@ func TestVirtualCreate(t *testing.T) {
 	teardown, fixture := utils.StartMockServer(url, "fake_virtual")
 	defer teardown()
 	line_item := map[string]interface{}{
-	"name":   "name",
-	"amount": 1000,
+		"name":   "name",
+		"amount": 1000,
 	}
 	lineItems := []map[string]interface{}{line_item}
 	data := map[string]interface{}{
-	"type":        "bank_account",
-	"decsription": "test",
-	"line_items":  lineItems,
+		"type":        "bank_account",
+		"decsription": "test",
+		"line_items":  lineItems,
 	}
 	body, err := utils.Client.VirtualAccount.Create(data, nil)
 	jsonByteArray, _ := json.Marshal(body)
@@ -61,4 +61,3 @@ func TestVirtualClose(t *testing.T) {
 	assert.Equal(t, err, nil)
 	utils.TestResponse(jsonByteArray, []byte(fixture), t)
 }
-

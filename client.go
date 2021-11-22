@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/razorpay/razorpay-go/constants"
-	"github.com/razorpay/razorpay-go/requests"
-	"github.com/razorpay/razorpay-go/resources"
+	"github.com/prithvihv/razorpay-go/constants"
+	"github.com/prithvihv/razorpay-go/requests"
+	"github.com/prithvihv/razorpay-go/resources"
 )
 
 //Request ...
